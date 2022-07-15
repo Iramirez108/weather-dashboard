@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Dashboard</title>
+        <!-- CSS only -->
+        <link rel="stlyesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row navbar navbbar-dark bg-dark">
+                <div class="col-12 text-center"></div>
+                <h1>Weather Dashboard</h1>
+            </div>
+        </header>
+        <div class="row">
+            <div class="coll-3 bg-light pb-2 pt-3" id="searchResults">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Search for a city:</h4>
+            </div>
+        </div>
+     <div class="row">
+        <div class="col-12">
+            <div class="input-group">
+                <input class="form-control" type="text" id="enterCity" placeholder="Enter city to view weather"><button type="button" id="searchBtn" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </div>
+     </div>
+     
+     <div class="row mt-3">
+        <div class="col-12">
+
+            <ul id="searchHistory" class="list-group"></ul>
+        </div>
+     </div>
+
+     <div id="weatherContent" class="col-9 pb-4 pt-4">
+        <div class="row pb-3 mr-2 ml-2">
+            <div id="cityDetail" class="col-12 border rounded px-3 py-3">
+        </div>
+     </div>
+
+     <div id="fiveDay" class="row pl-2"></div>   
+     <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+     <script src="./script.js"></script>
+    </body>
+
+</html>
