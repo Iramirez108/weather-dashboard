@@ -34,3 +34,27 @@ function currentCondition(city){
         futureCondition(lat,lon);
     });
 };
+
+//got code from https://www.openuv.io/uvindex
+function getUVIndex() {
+    var lat = $('#lat').val();
+    var lng = $('#lng').val();
+    var alt = $('#alt').val();
+    var ozone = $('#ozone').val();
+    var dt = $('#dt').val();
+   
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      beforeSend: function(request) {
+        request.setRequestHeader('x-access-token', '1d60f2c9bd5146e2b08fb7ba82574d66');
+      },
+      url: 'https://api.openuv.io/api/v1/uv?lat=' + lat + '&lng=' + lng + '&alt=' + alt + '&ozone=' + ozone + '&dt=' + dt,
+      success: function(response) {
+        //handle successful response
+      },
+      error: function(response) {
+        // handle error response
+      }
+    });
+   }
